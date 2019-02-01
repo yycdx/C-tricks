@@ -1,0 +1,13 @@
+ 
+一个.h文件：
+
+template <typename S_>
+    class OMSCKF {
+...
+}
+
+定义一种带模板的类的时候，如果想在.h文件里声明一些函数，再另外写一个.cpp函数定义这些函数，则会出现：
+template class used without template parameters
+这种错误。
+
+把函数定义都写在.h里面就行了。
