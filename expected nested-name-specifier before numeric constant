@@ -1,0 +1,12 @@
+error: expected nested-name-specifier before numeric constant
+
+template <typename _S>
+	class OMSCKF {
+	......
+	}
+
+在上述类定义中，如果typename使用了_S，那么会有一大堆ndk-build编译错误。
+第一条是：expected nested-name-specifier before numeric constant
+
+解决方法是：把_S改成S_等。
+原文：https://github.com/Tomasu/LuaGlue/issues/55
